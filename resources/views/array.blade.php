@@ -11,9 +11,9 @@
 <body>
 
     @foreach ($array as $product)
-        <img src="{{$product['path']}}" alt="{{$product['title']}}" srcset="">
-        {{$product['title']}}
-        {{$product['price']}}
+    <img src="{{$product['path']}}" alt="{{$product['title']}}" srcset="">
+    {{$product['title']}}
+    {{$product['price']}}
     @endforeach
 
 </body>

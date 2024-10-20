@@ -1,0 +1,21 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\Report;
+use Illuminate\Http\Request;
+
+class ReportsController extends Controller
+{
+    public function index()
+    {
+        $reports = Report::all();
+        return view('report.index', compact('reports'));
+    }
+
+    public function destroy(Report $report)
+    {
+        $report->delete();
+        return redirect()->back();
+    }
+}
